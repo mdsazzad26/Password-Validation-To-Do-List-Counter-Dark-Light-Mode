@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password-Validation,To-Do-List,Counter,Dark/Light-Mode</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>MD. SAZZADUL ALAM</h1>
+
+        <button id="themeBtn">Dark Mode</button>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. Dark / Light Mode -->
+        <section class="card">
+            <h2>1. Dark / Light Mode</h2>
+
+            <p>Change the website theme.</p>
+
+            <button id="themeBtn2">Switch Theme</button>
+        </section>
+
+        <!-- 2. Counter -->
+        <section class="card">
+            <h2>2. Counter</h2>
+
+            <div class="counter">
+                <button id="decrease">−</button>
+
+                <span id="count">1</span>
+
+                <button id="increase">+</button>
+            </div>
+
+            <p id="counterMessage">
+                Minimum: 1 | Maximum: 10
+            </p>
+        </section>
+
+        <!-- 3. To-Do List -->
+        <section class="card">
+            <h2>3. To-Do List</h2>
+
+            <div class="todo-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                >
+
+                <button id="addTask">Add</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- 4. Password Validation -->
+        <section class="card">
+            <h2>4. Password Validation</h2>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+            >
+
+            <ul class="rules">
+                <li id="lengthRule">
+                    At least 8 characters
+                </li>
+
+                <li id="upperRule">
+                    One uppercase letter
+                </li>
+
+                <li id="numberRule">
+                    One number
+                </li>
+            </ul>
+
+            <p id="passwordMessage"></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 MD. Sazzadul Alam | All Rights Reserved.</p>
+    </footer>
+
+    <script src="sript.js"></script>
+
+</body>
+</html>
