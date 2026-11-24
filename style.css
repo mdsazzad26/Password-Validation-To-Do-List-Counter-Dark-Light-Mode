@@ -1,0 +1,422 @@
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    padding-top: 100px;
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #1f2a43;
+    color: white;
+
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: white;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px #00000012;
+
+    transition: 0.3s ease;
+}
+
+.card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+#themeBtn {
+    background: #292424;
+    color: white;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 25px 0;
+}
+
+.counter button {
+    font-size: 25px;
+
+    width: 50px;
+    height: 48px;
+
+    padding: 0;
+}
+
+#count {
+    font-size: 35px;
+    font-weight: bold;
+
+    min-width: 35px;
+    text-align: center;
+}
+
+
+/* =========================
+   TODO LIST
+========================= */
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background: white;
+    color: #1e293b;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#taskList li {
+    background: #f1f5f9;
+
+    margin-top: 10px;
+    padding: 12px;
+
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+.delete-btn {
+    background: #dc2626;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   PASSWORD VALIDATION
+========================= */
+
+.rules {
+    list-style: none;
+
+    margin-top: 15px;
+
+    line-height: 2;
+
+    font-size: 14px;
+}
+
+.valid {
+    color: #16a34a;
+}
+
+.invalid {
+    color: #dc2626;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark .header {
+    background: #020617;
+}
+
+body.dark .card {
+    background: #1e293b;
+    box-shadow: 0 5px 20px #00000030;
+}
+
+body.dark input {
+    background: #334155;
+    color: white;
+    border-color: #475569;
+}
+
+body.dark #taskList li {
+    background: #334155;
+}
+
+body.dark #themeBtn {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+body.dark .footer {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 18px 4%;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding: 15px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 550px) {
+
+    body {
+        padding-top: 85px;
+    }
+
+    .header {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+    #themeBtn {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+
+        margin: 20px auto;
+        padding: 15px;
+
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+    }
+
+    .todo-input {
+        gap: 7px;
+    }
+
+    .todo-input button {
+        padding: 10px 14px;
+    }
+
+    .counter {
+        gap: 20px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 20px 10px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .header h1 {
+        font-size: 13px;
+    }
+
+    #themeBtn {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h2 {
+        font-size: 17px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .todo-input button {
+        width: 100%;
+    }
+
+}
